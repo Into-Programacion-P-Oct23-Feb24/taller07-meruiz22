@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package problema4;
+package problema5;
 
 import java.util.Locale;
 import java.util.Scanner;
 
 /**
  *
- * @author LAB.ELECT
+ * @author Usuario
  */
-public class Problema4 {
+public class Problema5 {
 
     /**
      * @param args the command line arguments
@@ -21,16 +21,16 @@ public class Problema4 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         int limite = 15;
+        int sig = 1;
         int denominador = 3;
-        int sig =1;
         String signo;
         String cadena = "1 ";
 
-        while (denominador <= limite) {
-            if (sig % 2 == 0) {
-                signo = "-";
-            } else {
+        do {
+           if (sig % 2 == 0) {
                 signo = "+";
+            } else {
+                signo = "-";
             }
             sig = sig +1;
             cadena = String.format("%s %s 1/%d ",
@@ -38,7 +38,7 @@ public class Problema4 {
                     signo,
                     denominador);
             denominador = denominador + 2;
-        }
+        } while (denominador <= limite);
 
         System.out.println(cadena);
     }
