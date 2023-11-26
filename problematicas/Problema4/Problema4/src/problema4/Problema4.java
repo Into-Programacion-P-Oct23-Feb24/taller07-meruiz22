@@ -28,9 +28,9 @@ public class Problema4 {
 
         while (denominador <= limite) {
             if (sig % 2 == 0) {
-                signo = "-";
-            } else {
                 signo = "+";
+            } else {
+                signo = "-";
             }
             sig = sig +1;
             cadena = String.format("%s %s 1/%d ",
