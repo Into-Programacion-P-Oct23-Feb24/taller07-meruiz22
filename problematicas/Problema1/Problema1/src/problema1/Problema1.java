@@ -43,7 +43,7 @@ public class Problema1 {
         cadenaReporteedad = String.format("%s%s\n", cadenaReporteedad,
                 "Listado de Edades");
 
-        while (bandera) {
+        do {
             System.out.println("Ingrese el nombre del Jugador: ");
             nombreJugador = entrada.nextLine();
             System.out.println("Ingrese el apellido del Jugador: ");
@@ -83,7 +83,7 @@ public class Problema1 {
             if (salir.equals("si")) {
                 bandera = false;
             }
-        }
+        }while (bandera);
         promedioEdad = (double) sumaEdades / contadorIteraciones;
         promedioEstatura = sumaEstatura / contadorIteraciones;
 
